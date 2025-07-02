@@ -269,3 +269,11 @@ img:hover {
     rotate: 2deg;
 }
 
+.marca-dagua {
+    font-size: 12px;
+    place-self: center;
+    color: white;
+    margin-bottom: 15px;
+    opacity: 30%;
+}
+
