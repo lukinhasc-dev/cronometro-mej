@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+    <title>Cronômetro</title>
+</head>
+
+<body>
+    <section id="estrutura-cronometro">
+        <section id="periodo">
+            <div class="periodo-cronometro">
+
+                <div class="logo-mej">
+                    <img src="Logo MEJ Atu.png" alt="Missão Evangélica Jaboque">
+                </div>
+
+                <div class="tit-desc-criar">
+                    <div class="titulo-cronometro">
+                        <h1 class="cronometro-title">Cronômetro</h1>
+                        <div class="criar-cronometro">
+                            <button onclick="CriarCronometro()">Criar Cronômetro</button>
+                            <button onclick="exportarCSV()">Exportar Histórico</button>
+                        </div>
+                    </div>
+
+                    <p class="cronometro-description">Escolha o momento para o cronômetro, informe as horas e minutos.
+                    </p>
+                </div>
+
+                <select id="tipo">
+                    <option value="Pregação">Pregação</option>
+                    <option value="Louvor">Louvor</option>
+                    <option value="Missões">Momento Missionário</option>
+                    <option value="Missões">Momento Inclusão</option>
+                    <option value="Missões">Ministério Infantil</option>
+                    <option value="Missões">Ministério Comunicação</option>
+                    <option value="Missões">Período de Oração</option>
+                    <option value="Missões">Dizimos e Ofertas</option>
+                    <option value="Missões">Apresentação Bebês</option>
+                    <option value="Missões">Teatro MEJ</option>
+                    <option value="Missões">Recados</option>
+                    <option value="Missões">Avisos</option>
+                    <option value="Missões">Outros</option>
+                </select>
+            </div>
+        </section>
+
+
+        <section class="cronometro">
+            <div class="tempo">
+                <label for="horas">Horas</label>
+                <input type="number" name="horas" id="horas" min="0" max="24">
+
+                <label for="minutos">Minutos</label>
+                <input type="number" name="minutos" id="minutos" min="0" max="59">
+            </div>
+
+            <div class="tempo-rapido">
+                <button onclick="adicionarTempo(1)">+1 min</button>
+                <button onclick="adicionarTempo(5)">+5 min</button>
+                <button onclick="adicionarTempo(10)">+10 min</button>
+                <button onclick="adicionarTempo(30)">+30 min</button>
+                <button onclick="adicionarTempo(60)">+60min</button>
+                <button onclick="limparCampos()">Limpar</button>
+            </div>
+
+            <div class="resultado">
+                <p id="tempo-estimado">teste</p>
+            </div>
+        </section>
+
+
+        <section class="controle-cronometro">
+            <h2 class="funcionalidades-title">Funcionalidades</h2>
+            <p class="funcionalidades-description">Funções para pausar, retomar, reiniciar e parar o cronômetro.</p>
+
+            <div class="funcionalidades-cronometro">
+                <button onclick="pausarCronometro()">⏸ Pausar</button>
+                <button onclick="retomarCronometro()">▶ Retomar</button>
+                <button onclick="reiniciarCronometro()">↩ Reiniciar</button>
+                <button onclick="pararCronometro()">⏹ Parar</button>
+            </div>
+
+            <div class="funcionalidades-cronometro-tempo">
+                <button onclick="adicionarTempoExtra(60)">+1 min</button>
+                <button onclick="adicionarTempoExtra(300)">+5 min</button>
+                <button onclick="adicionarTempoExtra(600)">+10 min</button>
+                <button onclick="adicionarTempoExtra(900)">+15 min</button>
+                <button onclick="adicionarTempoExtra(1800)">+30 min</button>
+            </div>
+        </section>
+
+
+        <section class="mensagem">
+            <h3 class="mensagemaviso-title">Mensagens e Avisos</h3>
+            <p class="avisos-description">Envie mensagens ou avisos ao palestrante, escreva através do campo.</p>
+
+            <div class="caixa-texto">
+                <textarea name="aviso" id="aviso" rows="3" cols="50"></textarea>
+                <div class="enviar-caixa-texto">
+                    <button onclick="enviarMensagem()">Enviar</button>
+                </div>
+            </div>
+
+            <div id="toast" class="toast">📨 Mensagem enviada!</div>
+        </section>
+
+
+
+        <script src="admin.js"></script>
+</body>
+
+</html>

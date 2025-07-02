@@ -1,0 +1,271 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg, #223951, #03192b);
+    color: white;
+}
+
+
+.cronometro-title,
+.funcionalidades-title,
+.mensagemaviso-title {
+    color: white;
+    font-size: 23px;
+}
+
+.cronometro-description,
+.funcionalidades-description,
+.avisos-description {
+    color: white;
+    font-size: 20px;
+}
+
+.cronometro-description {
+    margin-bottom: 13px;
+}
+
+
+#estrutura-cronometro {
+    place-self: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+img {
+    width: 172px;
+    height: 150px;
+    transition: all 0.3s ease-in-out;
+}
+
+.logo-mej {
+    display: flex;
+    padding-top: 20px;
+    justify-content: center;
+}
+
+.periodo-cronometro {
+    display: flex;
+    flex-direction: column;
+}
+
+.cronometro input {
+    padding-left: 5px;
+    font-size: 17px;
+}
+
+#tipo {
+    height: 35px;
+    border-radius: 5px;
+    font-size: 17px;
+    outline: none;
+    border: none;
+}
+
+option {
+    font-size: 17px;
+}
+
+label {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    color: white;
+}
+
+.tempo {
+    display: flex;
+    flex-direction: column;
+}
+
+.tempo input {
+    height: 38px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.tempo-rapido {
+    display: flex;
+    outline: none;
+    margin-top: 15px;
+    gap: 5px;
+}
+
+.tempo-rapido button {
+    background-color: #133d67;
+    border: 1px solid white;
+    border-radius: 10px;
+    height: 35px;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    width: 100%;
+    padding: 0px 5px 0px 5px;
+    font-size: 16px;
+}
+
+.resultado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #800020;
+    height: 50px;
+    margin-top: 25px;
+    border-radius: 10px;
+    color: white;
+    font-size: 21px;
+}
+
+.controle-cronometro {
+    border-top: 1px solid white;
+    padding-top: 10px;
+    margin: 35px 0px 0px 0px;
+}
+
+.funcionalidades-cronometro {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 25px;
+    gap: 5px;
+}
+
+.funcionalidades-cronometro button {
+    padding: 0px 10px 0px 10px;
+    height: 35px;
+    color: white;
+    width: 100%;
+    background-color: #800020;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid white;
+    font-size: 15px;
+}
+
+
+.funcionalidades-cronometro-tempo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.funcionalidades-cronometro-tempo button {
+    background-color: #133d67;
+    border-radius: 10px;
+    height: 35px;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid white;
+    margin-top: 13px;
+    color: white;
+    width: 100%;
+    padding: 0px 5px 0px 5px;
+    font-size: 15px;
+}
+
+.mensagem {
+    border-top: 1px solid white;
+    padding-top: 10px;
+    margin: 35px 0px 0px 0px;
+}
+
+.caixa-texto {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.caixa-texto textarea {
+    width: 100%;
+    outline: none;
+    border: none;
+    resize: none;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.enviar-caixa-texto {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.enviar-caixa-texto button {
+    background-color: #28a745;
+    border-radius: 10px;
+    height: 35px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: white;
+    margin-top: 15px;
+    padding: 0px 15px 0px 15px;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.titulo-cronometro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 9px;
+}
+
+.titulo-cronometro button {
+    background-color: #133d67;
+    color: white;
+    font-size: 16px;
+    border-radius: 15px;
+    padding: 0px 10px 0px 10px;
+    height: 35px;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid white;
+}
+
+.toast {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 9999;
+    font-family: Arial, sans-serif;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+button {
+    transition: all 0.3s ease-in-out;
+
+}
+
+button:hover {
+    transform: scale(1.03);
+    background-color: #19782f;
+    border: 1px solid #0c3e18;
+}
+
+img:hover {
+    transform: scale(1.05);
+    rotate: 2deg;
+}
+
